@@ -1,14 +1,12 @@
 {
   "name": "Sunboss's Home Assistant Add-ons",
-  "url": "https://github.com/sunboss/hass-addons-frpc",
   "maintainer": "sunboss <sunboss@qq.com>",
   "addons": [
     {
       "name": "FRPC Multi-Port Add-on",
       "slug": "frpc_multi_port",
       "url": "https://github.com/sunboss/hass-addons-frpc/tree/main/frpc-addon",
-      "stage": "stable",
-      "description": "A customized FRPC add-on for Home Assistant with support for multiple ports."
+      ...
     }
   ]
 }
