@@ -1,43 +1,30 @@
 {
-  "name": "FRPC 加载项",
-  "version": "20250820.01",
-  "slug": "frpc",
-  "description": "Home Assistant 的 FRP 客户端加载项，支持多端口隧道",
-  "url": "https://github.com/sunboss/hass-addons-frpc",
+  "name": "FRPC Multi-Port Add-on",
+  "version": "20250820.1",
+  "slug": "frpc_multi_port",
+  "description": "A customized FRPC add-on for Home Assistant with support for multiple ports.",
+  "url": "https://github.com/sunboss/frpc-addon",
   "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
-  "startup": "application",
+  "startup": "services",
   "boot": "auto",
-  "ports": {},
-  "map": ["config:rw"],
   "options": {
-    "server_addr": "",
-    "server_port": 7000,
-    "token": "",
-    "user": "",
-    "ports": [
-      {
-        "name": "example",
-        "type": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 8080,
-        "remote_port": 8080
-      }
-    ]
+    "frpc_server_address": "",
+    "frpc_server_port": 7000,
+    "frpc_token": "",
+    "ports": []
   },
   "schema": {
-    "server_addr": "str",
-    "server_port": "int",
-    "token": "str?",
-    "user": "str?",
+    "frpc_server_address": "str",
+    "frpc_server_port": "int",
+    "frpc_token": "str",
     "ports": [
       {
-        "name": "str",
-        "type": "list(tcp|udp|http|https|stcp|xtcp|sudp)",
         "local_ip": "str",
         "local_port": "int",
-        "remote_port": "int"
+        "remote_port": "int",
+        "name": "str"
       }
     ]
   },
-  "image": "ghcr.io/sunboss/frpc-{arch}"
+  "host_network": true
 }
