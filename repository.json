@@ -1,12 +1,11 @@
 {
-  "name": "Sunboss's Home Assistant Add-ons",
-  "maintainer": "sunboss <sunboss@qq.com>",
-  "addons": [
-    {
-      "name": "FRPC Multi-Port Add-on",
-      "slug": "frpc_multi_port",
-      "url": "https://github.com/sunboss/hass-addons-frpc/tree/main/frpc-addon",
-      ...
-    }
-  ]
+    ...
+    "addons": [
+      {
+        "name": "FRPC Multi-Port Add-on",
+        "slug": "frpc_multi_port",
+        "url": "https://github.com/sunboss/hass-addons-frpc/tree/main/frpc-addon",  // 确保这里的路径正确
+        ...
+      }
+    ]
 }
